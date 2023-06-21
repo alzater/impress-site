@@ -1,0 +1,35 @@
+<!doctype HTML>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Impress</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:900&display=swap&subset=cyrillic');
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="runningLine">
+        <span class="runningLine-wrapper">
+            <span class="runningLine-line">
+                <span>скоро</span>
+            </span>
+        </span>
+    </div>
+    <div class="content">
+        <div class="logo">
+            <img src="assets/images/impress.svg">
+        </div>
+    </div>
+</div>
+<script>
+    var rlLine = document.querySelector('.runningLine-line');
+    var rlWord = rlLine.querySelector('*');
+    for (var i = 0; i < 5; ++i) {
+        rlLine.append(rlWord.cloneNode(true));
+    }
+    rlLine.after(rlLine.cloneNode(true));
+</script>
+</body>
+</html>
